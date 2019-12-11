@@ -12,7 +12,7 @@ $siteFont: "Roboto", sans-serif;
 }
 
 html {
-	max-width: 110%;
+	max-width: 100%;
 	overflow-x: hidden;
 	height: 100%;
 	padding: 0;
@@ -30,7 +30,7 @@ footer {
 	background-color: $headerRed;
     height: 80px;
 	display: inline-block;
-	width: 110%;
+	width: 100%;
 	position: absolute;
 	padding-left: 20%;
 	color: white;
@@ -49,9 +49,9 @@ footer {
 	
 }
 
-#banner {
+#mobilenav {
 	display: none;
-	width: 130%;
+	width: 100%;
 	background-color: $navBlack;
 	padding-left: 10px;
 	padding-top: 10px;
