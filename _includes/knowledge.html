@@ -1,0 +1,15 @@
+<div id="knowledge">
+	<h2>Knowledge base</h2>
+	{% for cat in site.data.knowledgebaseCat %}
+		<div class="knowledgeCat">
+			<h3>{{ cat.name }}</h3>
+			<ul>
+			{% for item in site.data.knowledgebase %}
+				{% if item.type == cat.name %}
+					<li>{{ item.name }}</li>
+				{% endif %}
+			{% endfor %}
+			</ul>
+		</div>
+	{% endfor %}
+</div>

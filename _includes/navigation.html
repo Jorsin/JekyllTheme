@@ -1,5 +1,5 @@
 <nav id="navigation">
-	<a id="navImg" href="{{ '/' | absolute_url }}" ><img src="{{ 'assets/images/title-logo.svg' | absolute_url }}" alt="Title logo" ></a>
+	<a id="navImg" href="{{ '/' | absolute_url }}" ><img src="{{ 'assets/images/title-logo.svg' | absolute_url }}" alt="Name image or text" ></a>
 	{% assign linkCompare = page.url | remove: '/' %}
 	{% if page.url == '/' %}{% assign linkCompare = '.' %}{% endif %}
 	{% for item in site.data.navigation %}

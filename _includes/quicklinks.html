@@ -1,0 +1,7 @@
+<div id="quicklinks">
+	{% for item in site.data.quicklinks %}
+		<a href="{{ item.link }}"> <!--Might need to add /assets/iamges to path-->
+			<img src="{{ item.imgname | prepend: '/assets/images/' | absolute_url }}" class="quick-img" alt="Quicklink" > 
+		</a>
+	{% endfor %}
+</div>

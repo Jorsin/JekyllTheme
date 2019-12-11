@@ -1,0 +1,38 @@
+#project-banner {
+	width: 100%;
+	height: 25em;
+	background-color: $backGrey;
+}
+
+#home {
+	width: 40%;
+	min-width: 300px;
+	padding-top: 2em;
+	display: inline-block;
+}
+
+#knowledge {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 5%;
+
+	.knowledgeCat {
+		display: inline-block;
+		width: 12em;
+	}
+}
+
+#intro-summary {
+	padding-top: 2.5em;
+
+	#quicklinks {
+		float: right;
+		margin-top: -4em;
+		margin-right: 6em;
+
+		img {
+			margin-left: 1em;
+		}
+	}
+}

@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-
-<div id="home">
-	{{ content }}
+{% include project-banner.html %}
+<div id="intro-summary">
+	{% include knowledge.html %}
+	<div id="home">
+		{{ content }}
+	</div>
+	{% include quicklinks.html %}
 </div>
