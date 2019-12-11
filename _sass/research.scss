@@ -1,0 +1,94 @@
+#research {
+	@extend %main-div;
+	text-align: initial;
+
+	&Input {
+		@extend %main-div;
+		display:inline-block;
+		text-align: left;
+	}
+
+	ul {
+		padding-left: 0px;
+		width: 100%;
+	}
+
+	li {
+		display: inline-block;
+		width: 100%;
+		margin-left: -21%;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		padding-left: 20.5%;
+		padding-right: 25%;
+
+		p {
+			display: inline-block;
+			float: left;
+			max-width: 75%;
+			margin-right: 5%;
+		}
+
+		a {
+			display: inline-block;
+			width: 15%;
+			text-align: center;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			margin-top: 1.4em;
+			float: right;
+		}
+	}
+
+	.oddResearch {
+		background-color: $backGrey;
+	}
+}
+
+#topic {
+	@extend %main-div;
+	text-align: initial;
+
+	td {
+		padding: 10px;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	tr {
+		background-color: $backGrey;
+		border-bottom: 15px solid white;
+	}
+
+	.linkCell {
+		width: 100px;
+	}
+
+	#tableHead {
+		border-bottom: 3px solid $btnRed;
+	}
+
+	#thSpacer {
+		height: 15px;
+
+		td {
+			display: none;
+		}
+	}
+
+	h3 {
+		color: $headerRed;
+	}
+}
+
+#project {
+	@extend %main-div;
+	text-align: initial;
+
+	.projectBack {
+		margin-top: 1em;
+	}
+}

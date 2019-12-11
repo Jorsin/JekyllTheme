@@ -1,0 +1,10 @@
+<nav id="navigation">
+	<a id="navImg" href="{{ '/' | absolute_url }}" ><img src="{{ 'assets/images/title-logo.svg' | absolute_url }}" alt="Title logo" ></a>
+	{% assign linkCompare = page.url | remove: '/' %}
+	{% if page.url == '/' %}{% assign linkCompare = '.' %}{% endif %}
+	{% for item in site.data.navigation %}
+		<a href="{{ item.link | absolute_url }}" class="navlink {% if linkCompare  == item.link %}current{% endif %}">
+			<h6>{{ item.name }}</h6>
+		</a>
+	{% endfor %}
+</nav>

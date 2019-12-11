@@ -1,0 +1,97 @@
+#people {
+	@extend %main-div;
+
+	&Input {
+		@extend %main-div;
+		display: inline-block;
+		text-align: left;
+	}
+
+	ul {
+		padding-left: 0px;
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: black;
+			height: 300px;
+			width: 200px;
+			margin-right: 70px;
+			outline: none;
+	
+			&:active {
+				outline: none;
+			}
+		}
+
+		li {
+			text-align: left;
+			display: inline-block;
+			vertical-align: top;
+	
+			h4 {
+				margin: 0px;
+				padding: 0px;
+				padding-top: 15px;
+			}
+	
+			p {
+				margin: 0px;
+			}
+		}
+	}
+	.oddpCategory {
+		background-color: $backGrey; 
+	}
+
+	.pCategory {
+		display: inline-block;
+		text-align: left;
+		width: 110%;
+		margin-left: -22%;
+		padding-left: 42%;
+
+		ul {
+			width: 70%;
+		}
+
+		h1 {
+			margin-top: 1%;
+		}
+	}
+}
+
+.peopleImg {
+	background-color: #A0A0A0;
+	height: 200px;
+	width: 200px;
+	display: block;
+}
+
+#person {
+	width: 50%;
+	margin-left: -30%;
+	min-width: 300px;
+	display: inline-block;
+	text-align: initial;
+
+	h5 {
+		margin-top: 0;
+	}
+
+	h2 {
+		margin-bottom: 0.2em;
+	}
+	
+	h4 {
+		color: $headerRed;
+	}
+
+	.peopleImg {
+		float: right;
+		height: 300px;
+		width: 300px;
+		margin-right: -60%;
+		margin-left: 5%;
+	}
+}

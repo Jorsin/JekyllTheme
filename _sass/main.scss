@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+$btnRed: #9C1E14;
+$headerRed: #9C1E14; //rgba(122, 212, 241, 0.849)
+$backGrey: #F8F9FA;
+$navBlack: #2B2B2B;
+$siteFont: "Roboto", sans-serif;
+
+%main-div {
+	width: 80%;
+	margin: auto;
+}
+
+html {
+	max-width: 110%;
+	overflow-x: hidden;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+footer {
+	background-color: $headerRed;
+    height: 80px;
+	display: inline-block;
+	width: 110%;
+	position: absolute;
+	padding-left: 20%;
+	color: white;
+	text-align: center;
+	bottom: 0;
+	
+	p {
+		padding-top: 0.8em;
+		margin-left: -45%;
+
+		a {
+			color: white;
+		}
+	}
+
+	
+}
+
+#banner {
+	display: none;
+	width: 130%;
+	background-color: $navBlack;
+	padding-left: 10px;
+	padding-top: 10px;
+
+	img {
+		width: 7em;
+		margin-top: 3px;
+	}
+}
+
+hr {
+	color: $headerRed;
+	background-color: $headerRed;
+	border: none;
+	height: 1px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: $siteFont;
+}
+
+h1 { font-size: 2.6875em; }
+h2 { font-size: 1.875em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1em; }
+p { font-size: 1em; a { color: $headerRed; } }
+
+a {
+	color: $headerRed;
+	text-decoration: none;
+
+	&:visited {
+		color: $headerRed;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+#container {
+	min-height: 100vh;
+	position: relative;
+}
+
+#contentContainer {
+	padding: 1% 5% 6em 5%;
+	font-family: $siteFont;
+	text-align: center;
+
+	h1, h2, h3 {
+		color: $headerRed;
+	}
+
+	.highlight {
+		background-color: transparent;
+		padding: 5px;
+	}
+
+	.boxLink {
+		display: inline-block;
+		background-color: $btnRed;
+		padding: 8px;
+		min-width: 100px;
+		color: white;
+		text-decoration: none;
+		text-align: center;
+	}
+}
+
+img[src~="content-small"] {
+	width: 10em;
+}
+
+img[src~="content-medium"] {
+	width: 14em;
+}
+
+img[src~="content-third-span"] {
+	width: 32%;
+}
+
+img[src~="content-full-span"] {
+	width: 100%;
+}
+
+#c-content {
+	@extend %main-div;
+}
+
+pre {
+	white-space: pre-wrap;		/* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;	/* Mozilla, since 1999 */
+	white-space: -pre-wrap;		/* Opera 4-6 */
+	white-space: -o-pre-wrap;	/* Opera 7 */
+	word-wrap: break-word;		/* Internet Explorer 5.5+ */
+}
