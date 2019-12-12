@@ -7,10 +7,7 @@ layout: default
 	<div id="project-all">
 		<ul>
 		{% for project in site.projects %}
-			{% assign projlangs = project.langs | split: ',' %}
-			{% for individlang in projlangs %}
-			{% assign langCompare = individlang | strip %}
-			{% if langCompare == page.name %}
+			{% if project.cata == page.name %}
 				<li class="projectItem" >
 					<a href="{{ project.url }}">
 					<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images' | append: '.png' }}" alt="project image">
@@ -36,7 +33,6 @@ layout: default
 					</div>
 				</li>
 			{% endif %}
-			{% endfor %}
 		{% endfor %}
 		</ul>
 	</div>

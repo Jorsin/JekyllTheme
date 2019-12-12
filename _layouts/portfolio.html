@@ -5,10 +5,11 @@ layout: default
 <div id="portfolio">
 	{{ content }}
 	<div id="projectCat">
-		{% for cat in site.data.projectCat %}
+		{% assign projcatsorted = site.projectcat | sort | reverse %}
+		{% for cat in projcatsorted %}
 			<ul>
 				<li>
-					<a href="#">
+					<a href="{{ cat.url }}">
 					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="Cata image">
 					<h5>{{ cat.name }}</h5>
 					{{ cat.description }}
@@ -38,9 +39,25 @@ layout: default
 				<a href="{{ project.url }}">
 				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images' | append: '.png' }}" alt="project image">
 				<h3>{{ project.name }}</h3>
-				
 				{{ project.description }}
 				</a>
+				<div class="singleprojlangs">
+						<ul>
+						{% if project.langs != null %}
+							{% assign projlangs = project.langs | split: ',' %}
+							{% for individlang in projlangs %}
+								{% assign langCompare = individlang | strip %}
+								{% for lang in site.langs %}
+								{% if langCompare == lang.name %}
+									<li style="background-color: #{{ lang.color }};" class="languageTag">
+										<a href="{{ lang.url }}">{{ lang.name }}</a>
+									</li>
+								{% endif %}
+								{% endfor %}
+							{% endfor %}
+						{% endif %}
+						</ul>
+				</div>
 			</li>
 		{% endfor %}
 		</ul>
