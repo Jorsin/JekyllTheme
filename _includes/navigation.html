@@ -3,7 +3,8 @@
 	{% assign linkCompare = page.url | remove: '/' %}
 	{% if page.url == '/' %}{% assign linkCompare = '.' %}{% endif %}
 	{% for item in site.data.navigation %}
-		<a href="{{ item.link | absolute_url }}" class="navlink {% if linkCompare  == item.link %}current{% endif %}">
+		<a href="{{ item.link | absolute_url }}" {% if forloop.last == true %} id="lastnav"{% endif %}
+		class="navlink {% if linkCompare  == item.link %}current{% endif %}">
 			<h6>{{ item.name }}</h6>
 		</a>
 	{% endfor %}

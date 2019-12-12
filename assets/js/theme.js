@@ -34,3 +34,14 @@ function toggleMenu() {
         }
     }
 }
+
+function checkScrollBars() {
+  var clientHeight = document.getElementById('container').clientHeight;
+  var normalw = 0;
+  var scrollw = 0;
+  console.log('Scroll height: ' + clientHeight + ' height: ' + document.body.clientHeight);
+  if(clientHeight > document.body.clientHeight){
+    console.log('Hello');
+      document.getElementById('lastnav').style.marginRight = '-13px';
+  }
+}

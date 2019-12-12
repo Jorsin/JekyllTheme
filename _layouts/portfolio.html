@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div id="portfolio">
+	{{ content }}
+	<div id="projectCat">
+		{% for cat in site.data.projectCat %}
+			<ul>
+				<li>
+					<a href="#">
+					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="Cata image">
+					<h5>{{ cat.name }}</h5>
+					{{ cat.description }}
+					</a>
+				</li>
+			</ul>
+		{% endfor %}
+	</div>
+
+	<div id="project-lang">
+		<ul>
+			<li id="listHead" ><h3>Languages</h3></li>
+		{% for lang in site.langs %}
+			<li style="background-color: #{{ lang.color }};" class="languageTag">
+				<a href="{{ lang.url }}">
+				{{ lang.name }}
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+
+	<div id="project-all">
+		<ul>
+		{% for project in site.projects %}
+			<li class="projectItem" >
+				<a href="{{ project.url }}">
+				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images' | append: '.png' }}" alt="project image">
+				<h3>{{ project.name }}</h3>
+				
+				{{ project.description }}
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
