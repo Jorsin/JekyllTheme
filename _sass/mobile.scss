@@ -32,7 +32,7 @@
 			width: 100%;
 			margin-left: -20%;
 			padding-left: 50px;
-			text-align: left;
+			text-align: center;
 		}
 	}
 
@@ -47,13 +47,13 @@
 		font-weight: bold;
 		margin-top: -10px;
 		display: block;
-		height: 60px;
-		width: 20%;
-		margin-right: 22%;
+		height: 2em;
+		width: 30%;
 
 		img {
 			width: 1em;
 			margin-left: 10%;
+			filter: invert(100%);
 		}
 
 		&::-moz-focus-inner {
@@ -85,90 +85,8 @@
 		}
 	}
 
-	#people {
-		@extend %main-mob;
-
-		.pCategory {
-			margin-left: -25%;
-			padding-left: 45%;
-		}
-	}
-
 	#contentContainer {
-		padding-top: 4em;
-	}
-
-	#project, #maps {
-		@extend %main-mob;
-	}
-
-	#topic {
-		@extend %main-mob;
-
-		table {
-			#tableHead, #thSpacer {
-				display: none;
-			}
-
-			tr {
-				display: inline-block;
-			}
-
-			td {
-				display: inline-block;
-
-				&:nth-child(1) {
-					font-weight: bold;
-				}
-			}
-		}
-	}
-
-	#research{
-		@extend %main-mob;
-		
-		&Input {
-			width: 100%;
-		}
-
-		li {
-			width: 140%;
-
-			.boxLink {
-				margin-right: 40%;
-			}
-		}
-	}
-
-	#maps-content {
-		@extend %main-mob;
-		padding-right: 0px;
-	}
-
-	#maps-panel {
-		display: inline-block;
-		width: 100%;
-		min-width: 200px;
-		height: 100px;
-		padding-top: 1em;
-	}
-
-	#person {
-		@extend %main-mob;
-		margin-left: auto;
-		min-width: 0;
-
-		.peopleImg {
-			float: none;
-			height: 200px;
-			width: 200px;
-			margin-right: 0;
-			margin-left: 0;
-		}
-	}
-
-	footer p {
-		font-size: 0.9em;
+		padding-top: 3em;
 	}
 
 	#section {
@@ -188,6 +106,102 @@
 	
 		.firstSect {
 			padding-top: 0;
+		}
+	}
+
+	#knowledge {
+		width: 100%;
+		padding-left: 10%;
+	}
+
+	#home {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	#intro-summary #quicklinks {
+		margin-top: 1em;
+		margin-right: 10%;
+		margin-bottom: 1em;
+	}
+
+	#portfolio {
+
+		#projectCat {
+			margin-right: 0;
+
+			h5 {
+				margin-bottom: 1em;
+			}
+
+			ul {
+				margin-left: 0;
+				height: unset;
+				width: 90%;
+
+				li {
+					
+					a {
+						height: unset;
+						width: 90%;
+						padding: 5%;
+					}
+					
+					img {
+						display: none;
+					}
+				}
+			}
+		}
+
+		#project-lang {
+
+			ul {
+				width: 80%;
+				padding: 5%;
+
+				#listHead {
+					margin-bottom: 1.5em;
+					
+					h3 {
+						margin-bottom: 0;
+					}
+				}
+	
+				#listbutton {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.projectItem {
+			height: unset;
+			width: 90%;
+
+			h3 {
+				margin: 0% 5% 0 5%;
+			}
+			
+			> a {
+				padding-top: 5%;
+				height: unset;
+
+				&:hover {
+					background-color: $backGrey;
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+			p {
+				margin: 0 5% 0 5%;
+			}
+		}
+
+		.singleprojlangs {
+			margin: 0 5% 5% 5%;
 		}
 	}
 }

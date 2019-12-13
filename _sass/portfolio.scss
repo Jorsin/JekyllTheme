@@ -69,13 +69,20 @@
 			text-align: initial;
 			padding: 2%;
 		}
+
+		#listbutton {
+			display: block;
+			margin-bottom: 1em;
+			margin-top: -1em;
+		}
 	}
 
 	.languageTag {
 		display: inline-block;
 		border-radius: 1em;
-		height:1.5em;
+		height:1.4em;
 		background-color: lightblue;
+		margin-bottom: 0.5em;
 
 		a {
 			color: initial;

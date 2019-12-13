@@ -5,11 +5,10 @@ layout: default
 <div id="portfolio">
 	{{ content }}
 	<div id="projectCat">
-		{% assign projcatsorted = site.projectcat | sort | reverse %}
-		{% for cat in projcatsorted %}
+		{% for cat in site.data.projectCat %}
 			<ul>
 				<li>
-					<a href="{{ cat.url }}">
+					<a href="#" onclick="return filterby('{{ cat.name | replace: ' ', '_' }}');">
 					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="Cata image">
 					<h5>{{ cat.name }}</h5>
 					{{ cat.description }}
@@ -22,9 +21,10 @@ layout: default
 	<div id="project-lang">
 		<ul>
 			<li id="listHead" ><h3>Languages</h3></li>
+			<li id="listbutton"><button onclick="return filterby('projectItem');">Reset filter</button></li>
 		{% for lang in site.langs %}
 			<li style="background-color: #{{ lang.color }};" class="languageTag">
-				<a href="{{ lang.url }}">
+				<a href="#" onclick="return filterby('{{ lang.name }}');">
 				{{ lang.name }}
 				</a>
 			</li>
@@ -35,11 +35,27 @@ layout: default
 	<div id="project-all">
 		<ul>
 		{% for project in site.projects %}
-			<li class="projectItem" >
+			<li class="projectItem 
+			{% assign projlangs = project.langs | split: ',' %}
+			{% for individlang in projlangs %}
+				{% assign langCompare = individlang | strip %}
+				{% for lang in site.langs %}
+					{% if langCompare == lang.name %}
+					{{ lang.name }}
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
+			{% assign projcata = project.cata | replace: ' ', '_' %}
+			{% for cata in site.data.projectCat %}
+				{% if project.cata == cata.name %}
+					{{ projcata }}
+				{% endif %}
+			{% endfor %}
+			" >
 				<a href="{{ project.url }}">
-				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images' | append: '.png' }}" alt="project image">
+				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="project image">
 				<h3>{{ project.name }}</h3>
-				{{ project.description }}
+				<p>{{ project.description }}</p>
 				</a>
 				<div class="singleprojlangs">
 						<ul>
@@ -50,7 +66,7 @@ layout: default
 								{% for lang in site.langs %}
 								{% if langCompare == lang.name %}
 									<li style="background-color: #{{ lang.color }};" class="languageTag">
-										<a href="{{ lang.url }}">{{ lang.name }}</a>
+										<a href="#" onclick="return filterby('{{ lang.name }}');">{{ lang.name }}</a>
 									</li>
 								{% endif %}
 								{% endfor %}

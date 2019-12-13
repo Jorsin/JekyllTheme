@@ -37,11 +37,54 @@ function toggleMenu() {
 
 function checkScrollBars() {
   var clientHeight = document.getElementById('container').clientHeight;
-  var normalw = 0;
-  var scrollw = 0;
-  console.log('Scroll height: ' + clientHeight + ' height: ' + document.body.clientHeight);
-  if(clientHeight > document.body.clientHeight){
+
+  console.log('Scroll height: ' + clientHeight + ' height: ' + document.body.clientHeight + ' width: ' + window.innerWidth);
+  if(clientHeight > document.body.clientHeight && window.innerWidth > 750){
     console.log('Hello');
-      document.getElementById('lastnav').style.marginRight = '-13px';
+      document.getElementById('body').style.marginRight = '-' + getScrollBarWidth() + 'px';
   }
+  else {
+    document.getElementById('body').style.marginRight = '0';
+  }
+}
+
+function getScrollBarWidth () {
+  var inner = document.createElement('p');
+  inner.style.width = "100%";
+  inner.style.height = "200px";
+
+  var outer = document.createElement('div');
+  outer.style.position = "absolute";
+  outer.style.top = "0px";
+  outer.style.left = "0px";
+  outer.style.visibility = "hidden";
+  outer.style.width = "200px";
+  outer.style.height = "150px";
+  outer.style.overflow = "hidden";
+  outer.appendChild (inner);
+
+  document.body.appendChild (outer);
+  var w1 = inner.offsetWidth;
+  outer.style.overflow = 'scroll';
+  var w2 = inner.offsetWidth;
+  if (w1 == w2) w2 = outer.clientWidth;
+
+  document.body.removeChild (outer);
+
+  return (w1 - w2);
+}
+
+function filterby(lang) {
+
+  var allproj = document.getElementsByClassName('projectItem');
+  for (i = 0; i < allproj.length; i ++){
+    allproj[i].style.display = "none";
+
+    if (allproj[i].classList.contains(lang)) {
+      allproj[i].style.display = "inline-block";
+    }
+  }
+
+  checkScrollBars();
+  return false;
 }

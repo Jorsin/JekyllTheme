@@ -10,7 +10,7 @@ layout: default
 			{% if project.cata == page.name %}
 				<li class="projectItem" >
 					<a href="{{ project.url }}">
-					<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images' | append: '.png' }}" alt="project image">
+					<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="project image">
 					<h3>{{ project.name }}</h3>
 					{{ project.description }}
 					</a>
