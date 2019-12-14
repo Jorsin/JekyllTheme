@@ -6,18 +6,18 @@ layout: default
 	{{ content }}
 	<div id="projectCat">
 		{% for cat in site.data.projectCat %}
-			<ul>
+			<ul {% if forloop.first == true %}class="firstCat"{% elsif forloop.last == true %}class="lastCat"{% endif %}>
 				<li>
 					<a href="#" onclick="return filterby('{{ cat.name | replace: ' ', '_' }}');">
-					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="Cata image">
+					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.jpg' }}" alt="Cata image">
 					<h5>{{ cat.name }}</h5>
-					{{ cat.description }}
+					<p>{{ cat.description }}</p>
 					</a>
 				</li>
 			</ul>
 		{% endfor %}
 	</div>
-
+	<hr>
 	<div id="project-lang">
 		<ul>
 			<li id="listHead" ><h3>Languages</h3></li>
@@ -31,7 +31,7 @@ layout: default
 		{% endfor %}
 		</ul>
 	</div>
-
+	<hr>
 	<div id="project-all">
 		<ul>
 		{% for project in site.projects %}

@@ -2,6 +2,13 @@
 	width: 100%;
 	height: 25em;
 	background-color: $backGrey;
+
+	img {
+		display: inline-block;
+		width: 100%;
+		height: 25em;
+		object-fit: cover;
+	}
 }
 
 #home {
@@ -20,6 +27,7 @@
 	.knowledgeCat {
 		display: inline-block;
 		width: 12em;
+		vertical-align: top;
 	}
 }
 
@@ -28,11 +36,13 @@
 
 	#quicklinks {
 		float: right;
-		margin-top: -4em;
 		margin-right: 6em;
 
-		img {
+		a {
 			margin-left: 1em;
+			vertical-align: top;
+			width: 3em;
+			height: 3em;
 		}
 	}
 }

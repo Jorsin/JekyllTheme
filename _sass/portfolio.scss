@@ -12,15 +12,16 @@
 	#projectCat {
 		text-align: center;
 		padding-top: 4em;
-		margin-right: 2.5em;
+		padding-left: 5em;
 
 		ul {
 			display: inline-block;
 			height: 21em;
 			width: 16.5em;
+			margin-right: 5em;
 			background-color: $backGrey;
 			padding: 0;
-			margin-left: 5em;
+			border-radius: 0.2em;
 
 			li {
 				display: block;
@@ -29,26 +30,31 @@
 				a {
 					color: initial;
 					display: block;
-					height: 21em;
+					height: 19.5em;
 					width: 15.5em;
-					padding:0.5em;
+					padding: 1em 0.5em 0.5em 0.5em;
+					border-radius: 0.2em;
 					transition: background-color 0.3s;
 
 					&:hover {
 						text-decoration: none;
-						background-color: $btnRed;
 
-						li {
-							background-color: $btnRed;
+						img {
+							box-shadow: 0 6px 20px rgba(0,0,0,.75);
+							transform: translate(0, -0.5em);
 						}
 					}
 				}
 
 				img {
-					width: 15.5em;
-					height: 13.5em;
+					width: 13em;
+					border-radius: 0.2em;
+					box-shadow: 0 6px 20px rgba(0,0,0,.6);
+					margin: 1em 0 1em 1.25em;
+					height: 10em;
 					display: block;
 					background-color: #AFAFAF;
+					transition: all 0.3s;
 				}
 			}
 		}
@@ -68,6 +74,7 @@
 			display: inline-block;
 			text-align: initial;
 			padding: 2%;
+			border-radius: 0.2em;
 		}
 
 		#listbutton {
@@ -87,7 +94,7 @@
 		a {
 			color: initial;
 			padding: 0em 0.3em 0.1em 0.3em;
-			border: 0.1em solid lightgrey;
+			border: 0.1em solid transparent;
 			border-radius: 1em;
 
 			&:hover {
@@ -111,13 +118,19 @@
 	.projectItem {
 		background-color: $backGrey;
 		width: 80%;
-		height: 20em;
+		border-radius: 0.2em;
+		height: 18em;
 		margin-bottom: 3em;
 		text-align: initial;
 		display: inline-block;
 
+		h3 {
+			margin-bottom: 3em;
+		}
+
 		> a {
 			width: 100%;
+			border-radius: 0.2em;
 			height: 17em;
 			padding-top: 1.5em;
 			padding-bottom: 1.5em;
@@ -138,11 +151,12 @@
 		img {
 			display: block;
 			background-color: #AFAFAF;
-			height: 17em;
-			width: 25em;
+			height: 15em;
+			width: 20em;
 			margin-right: 1em;
 			margin-left: 1.5em;
 			float: left;
+			object-fit: cover;
 		}
 	}
 

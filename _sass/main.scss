@@ -3,7 +3,7 @@
 
 $btnRed: #DEAAA4; //#D4AF37;
 $headerRed: #9C1E14; //rgba(122, 212, 241, 0.849)
-$backGrey: #F8F9FA;
+$backGrey: lightgrey ;//#F8F9FA;
 $navBlack: white;
 $siteFont: "Roboto Condensed", sans-serif;
 
@@ -150,7 +150,6 @@ pre {
 
 .quick-img {
 	display: inline-block;
-	background-color: grey;
 	width: 3em;
 	height: 3em;
 }
