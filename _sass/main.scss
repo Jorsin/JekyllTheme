@@ -7,11 +7,6 @@ $backGrey: lightgrey ;//#F8F9FA;
 $navBlack: white;
 $siteFont: "Roboto Condensed", sans-serif;
 
-%main-div {
-	width: 80%;
-	margin: auto;
-}
-
 html {
 	max-width: 100%;
 	overflow-x: hidden;
@@ -132,12 +127,13 @@ img[src~="content-third-span"] {
 	width: 32%;
 }
 
-img[src~="content-full-span"] {
-	width: 100%;
+img[src~="content-half-span"] {
+	width: 50%;
+	display: inline-block;
 }
 
-#c-content {
-	@extend %main-div;
+img[src~="content-full-span"] {
+	width: 100%;
 }
 
 pre {

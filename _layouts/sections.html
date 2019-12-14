@@ -2,14 +2,12 @@
 layout: default
 ---
 
-<div id="c-content">
-    <div id="section">
-            {% assign sections = content | split: '<!--split-->' %}
-            {% for sect in sections %}
-                {% assign indexOdd2 = forloop.index0 | modulo: 2 %}
-                <div class="sectDiv {% if indexOdd2 == 1 %} oddSect {% endif %}{% if forloop.index0 == 0 %}firstSect{% endif %}">
-                    {{ sect }}
-                </div>
-            {% endfor %}
-    </div>
+<div id="section">
+        {% assign sections = content | split: '<!--split-->' %}
+        {% for sect in sections %}
+            {% assign indexOdd2 = forloop.index0 | modulo: 2 %}
+            <div class="sectDiv {% if indexOdd2 == 1 %} oddSect {% endif %}{% if forloop.index0 == 0 %}firstSect{% endif %}">
+                {{ sect }}
+            </div>
+        {% endfor %}
 </div>

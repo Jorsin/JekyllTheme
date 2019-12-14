@@ -1,7 +1,9 @@
 #plain {
-	@extend %main-div;
 	display: inline-block;
 	text-align: left;
+	width: 80%;
+    margin-left: 10%;
+    margin-top: 3em;
 
 	& h4 {
 		color: $headerRed;
@@ -14,6 +16,7 @@
 }
 
 #section {
+	padding-top: 3em;
 	text-align: left;
 
 	.sectDiv {
@@ -31,5 +34,33 @@
 
 	.firstSect {
 		padding-top: 0;
+	}
+}
+
+#pdfview {
+	min-height: 80%;
+    position: fixed;
+    height: 100%;
+	width: 100%;
+	box-sizing: inherit;
+	
+	&:before {
+		box-sizing: inherit;
+	}
+
+	&:after {
+		box-sizing: inherit;
+	}
+
+	#pdf {
+		box-sizing: inherit;
+	
+	&:before {
+		box-sizing: inherit;
+	}
+
+	&:after {
+		box-sizing: inherit;
+	}
 	}
 }
