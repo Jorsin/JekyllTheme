@@ -7,16 +7,21 @@
 
 	#mobilenav {
 		display: inline-block;
-		z-index: 1;
+		z-index: 2;
 		position: $navPos;
 
 		a {
 			outline: none;
 		}
+		
+		img {
+			z-index: 3;	
+		}
 	}
 
 	nav {
 		/* min-height: 50px; */
+		z-index: 1;
 		display: block;
 		position: $navPos;
 		transform: translate(0%, -100%);
