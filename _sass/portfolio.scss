@@ -90,7 +90,11 @@
 		height:1.4em;
 		background-color: lightblue;
 		margin-bottom: 0.5em;
-
+		
+		&::before {
+			opacity: 50%;
+		}
+		
 		a {
 			color: initial;
 			padding: 0em 0.3em 0.1em 0.3em;
