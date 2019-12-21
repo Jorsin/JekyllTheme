@@ -3,16 +3,26 @@
         width: 13em;
     }
 
-    #portfolio .projectItem{
-        height: 20em;
-
-        img {
-            height: 17em;
-            width: 25em;
+    #portfolio {
+        .projectItem{
+            height: 20em;
+    
+            > a {
+                height: 17em;
+            }
+    
+            img {
+                height: 17em;
+                width: 25em;
+            }
+    
+            h3 {
+                margin-bottom: 1.5em;
+            }
         }
 
-        h3 {
-            margin-bottom: 1.5em;
+        .singleprojlangs {
+            margin-top: 16.2em;
         }
     }
 }
