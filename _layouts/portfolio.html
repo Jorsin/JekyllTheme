@@ -9,7 +9,7 @@ layout: default
 			<ul {% if forloop.first == true %}class="firstCat"{% elsif forloop.last == true %}class="lastCat"{% endif %}>
 				<li>
 					<a href="#" onclick="return filterby('{{ cat.name | replace: ' ', '_' }}');">
-					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.jpg' }}" alt="Cata image">
+					<img src="{{ cat.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.jpg' | absolute_url }}" alt="Cata image">
 					<h5>{{ cat.name }}</h5>
 					<p>{{ cat.description }}</p>
 					</a>
@@ -52,8 +52,8 @@ layout: default
 				{% endif %}
 			{% endfor %}
 			" >
-				<a href="{{ project.url }}">
-				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' }}" alt="project image">
+				<a href="{{ project.url | absolute_url }}">
+				<img src="{{ project.name | replace: ' ', '_' | prepend: '/assets/images/' | append: '.png' | absolute_url }}" alt="project image">
 				<h3>{{ project.name }}</h3>
 				<p>{{ project.description }}</p>
 				</a>
