@@ -23,7 +23,7 @@ layout: default
 			<li id="listHead" ><h3>Languages</h3></li>
 			<li id="listbutton"><button onclick="return filterby('projectItem');">Reset filter</button></li>
 		{% for lang in site.langs %}
-			<li style="background-color: #{{ lang.color }};" class="languageTag">
+			<li style="background-color:rgba({{ lang.color }}, 0.6);" class="languageTag">
 				<a href="#" onclick="return filterby('{{ lang.name }}');">
 				{{ lang.name }}
 				</a>
@@ -65,7 +65,7 @@ layout: default
 								{% assign langCompare = individlang | strip %}
 								{% for lang in site.langs %}
 								{% if langCompare == lang.name %}
-									<li style="background-color: #{{ lang.color }};" class="languageTag">
+									<li style="background-color: rgba({{ lang.color }}, 0.6);" class="languageTag">
 										<a href="#" onclick="return filterby('{{ lang.name }}');">{{ lang.name }}</a>
 									</li>
 								{% endif %}
